@@ -5,9 +5,7 @@ USER gitpod
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     sdk install java 19.0.2-open && \
     sdk default java 19.0.2-open"
-
-RUN nvm install 16.20.0
-
+    
 RUN npm install -g generator-jhipster
 
 RUN mkdir /workspace/downloads && mkdir /workspace/tools
