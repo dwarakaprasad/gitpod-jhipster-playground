@@ -6,8 +6,6 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     sdk install java 19.0.2-open && \
     sdk default java 19.0.2-open"
 
-RUN bash -c "npm install -g generator-jhipster"
-
 RUN bash -c "cd /workspace && \
     mkdir downloads && \
     mkdir tools"
