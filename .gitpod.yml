@@ -1,0 +1,8 @@
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - Pivotal.vscode-boot-dev-pack
+    - eamodio.gitlens
