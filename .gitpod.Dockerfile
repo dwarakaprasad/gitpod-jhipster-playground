@@ -6,6 +6,14 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     sdk install java 19.0.2-open && \
     sdk default java 19.0.2-open"
 
+RUN bash -c "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/install.sh | bash"
+
+RUN bash -c "nvm install 16.20.0"
+
+RUN bash -c "npm install -g generator-jhipster"
+
+RUN bash -c "mkdir /workspace"
+
 RUN bash -c "cd /workspace && \
     mkdir downloads && \
     mkdir tools"
