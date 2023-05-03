@@ -1,5 +1,15 @@
 image:
   file: .gitpod.Dockerfile
+  
+tasks:
+  - name: Setup environment
+    init: mkdir /workspace/downloads && \
+          mkdir /workspace/tools && \
+          cd /workspace/downloads && \
+          wget -c http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-03/R/eclipse-jee-2022-03-R-linux-gtk-x86_64.tar.gz && \
+          cd /workspace/downloads && \
+          tar -xvf download.php\?file\=%2Ftechnology%2Fepp%2Fdownloads%2Frelease%2F2022-03%2FR%2Feclipse-jee-2022-03-R-linux-gtk-x86_64.tar.gz --directory /workspace/tools/ && \
+          nvm install 16.19.0
 
 vscode:
   extensions:
