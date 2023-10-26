@@ -8,7 +8,7 @@ RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     
 RUN npm install -g generator-jhipster@7.8.1
 
-RUN bash -c ". ~/.nvm/nvm.sh && nvm install 16.1 && nvm alias default 16.19.0"
+RUN bash -c ". ~/.nvm/nvm.sh && nvm install 16.19.0 && nvm alias default 16.19.0"
 
 RUN wget -c "http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2022-03/R/eclipse-jee-2022-03-R-linux-gtk-x86_64.tar.gz" \
     -O $HOME/eclipse-jee-2022-03-R-linux-gtk-x86_64.tar.gz
