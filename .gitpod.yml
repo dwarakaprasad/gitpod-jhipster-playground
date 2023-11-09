@@ -3,7 +3,7 @@ image:
 
 additionalRepositories:
     - url: https://github.com/dwarakaprasad/jhipster-kool
-      checkoutLocation: blueprints
+      checkoutLocation: jhipster-kool
 
 tasks:
     - name: Setup environment
@@ -14,7 +14,7 @@ tasks:
       # change working directory as per configured in `checkoutLocation`
       # which is configured above as `/workspaces/blueprints`
       before: |
-          cd ../blueprints/jhipster-kool
+          cd ../jhipster-kool
       init: |
           echo npm install
           echo npm link
