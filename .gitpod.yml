@@ -1,13 +1,33 @@
 image:
   file: .gitpod.Dockerfile
-  
+
+additionalRepositories:
+    - url: https://github.com/dwarakaprasad/jhipster-kool
+      checkoutLocation: blueprints
+
 tasks:
-  - name: Setup environment
-    init: |
-      tar -xvf $HOME/eclipse-jee-2022-03-R-linux-gtk-x86_64.tar.gz --directory /workspace
+    - name: Setup environment
+      init: |
+        tar -xvf $HOME/eclipse-jee-2022-03-R-linux-gtk-x86_64.tar.gz --directory /workspace
+
+    - name: blueprints
+      # change working directory as per configured in `checkoutLocation`
+      # which is configured above as `/workspaces/blueprints`
+      before: |
+          cd ../blueprints/jhipster-kool
+      init: |
+          echo npm install
+          echo npm link
+      command: |
+          echo npm link
 
 vscode:
   extensions:
     - vscjava.vscode-java-pack
     - Pivotal.vscode-boot-dev-pack
     - eamodio.gitlens
+    - dbaeumer.vscode-eslint
+    - manuth.eslint-language-service
+    - rvest.vs-code-prettier-eslint
+    - rvest.vs-code-prettier-eslint
+    - ZixuanChen.vitest-explorer
